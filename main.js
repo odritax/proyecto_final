@@ -73,15 +73,15 @@
     }
 
     function showPosition(position) {
-         console.log("Latitude: " + position.coords.latitude + 
-        "<br>Longitude: " + position.coords.longitude);
-        const latitud_actual=position.coords.latitude;
-        const longitud_actual=position.coords.longitude;
-        if (check_origin==true){
-            document.getElementById('jps_origin').setAttribute('value',`${latitud_actual},${longitud_actual}`);    
-        }else{
-            document.getElementById('jps_destinity').setAttribute('value',`${latitud_actual},${longitud_actual}`);    
-        }
+            console.log("Latitude: " + position.coords.latitude + 
+            "<br>Longitude: " + position.coords.longitude);
+            const latitud_actual=position.coords.latitude;
+            const longitud_actual=position.coords.longitude;
+            if (check_origin==true){
+                document.getElementById('jps_origin').setAttribute('value',`${latitud_actual},${longitud_actual}`);    
+            }else{
+                document.getElementById('jps_destinity').setAttribute('value',`${latitud_actual},${longitud_actual}`);    
+            }
     }
     
     var check_origin=false;
