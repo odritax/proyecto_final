@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400&display=swap" rel="stylesheet">    <link rel="stylesheet" href="style.css">
+    <title>Proyecto Final</title>
+</head>
+<body>
+    <div class="container">
+        <br><br> <br>
+        <div class="row">
+            <div class="col-md-4 "></div>
+            <div class="col-md-5 col-sm-12">
+                <div class="card text-center">
+                    <div class="card-header">
+                        <h5 id="titulo">Ninja Motor Ride</h5>
+                    </div>
+                    <div class="card-body">
+                        <img src="img/auto.gif" id="autito" alt="">
+                        <br><br>
+                        <select name="" id="origen" class="form-control">
+                            <option value=""  selected disabled>Ciudad de Origen</option>
+                            <option value="-18.4746,-70.29792" data-nombre="Arica">Arica</option>
+                            <option value="-20.21326,-70.15027" data-nombre="Iquique" >Iquique</option>
+                            <option value="-23.65236,-70.3954" data-nombre="Antofagasta">Antofagasta</option>
+                            <option value="-29.90453,-71.24894" data-nombre="La Serena">La Serena</option>
+                            <option value="-33.036,-71.62963" data-nombre="Valparaíso">Valparaíso</option>
+                            <option value="jps" id="jps_origin" data-nombre="su ubicación actual">Ubicación Actual</option>
+
+                        </select>
+                        <br>
+                        <select name="" id="destino" class="form-control">
+                          <option value="" selected disabled>Ciudad de Destino</option>
+                          <option value="-18.4746,-70.29792" data-nombre="Arica">Arica</option>
+                          <option value="-20.21326,-70.15027" data-nombre="Iquique" >Iquique</option>
+                          <option value="-23.65236,-70.3954" data-nombre="Antofagasta">Antofagasta</option>
+                          <option value="-29.90453,-71.24894" data-nombre="La Serena">La Serena</option>
+                          <option value="-33.036,-71.62963" data-nombre="Valparaíso">Valparaíso</option>
+                          <option value="jps" id="jps_destinity" data-nombre="su ubicación actual">Ubicación Actual</option>
+                        </select>
+                        <br>
+                        <select name="" id="vehiculo" class="form-control">
+                            <option  disabled selected value="">Vehículo</option>
+                            <option value="Fiat Argo">Fiat Argo</option>
+                            <option value="Toyota Prius">Toyota Prius</option>
+                            <option value="Suzuki Alto 800">Susuki Alto 800</option>
+                            <option value="Nissan Juke">Nissan Juke</option>
+                        </select>
+                        <br>
+                      <a href="#" class="btn btn-primary" id="calcular">Calcular</a>
+                    </div>
+                  </div>
+            </div>
+            <div class="col"></div>
+        </div>
+    </div>
+    <div id="modal" class="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-body">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+             <p>Desde <span id="origin"></span> hacia <span id="destiny"></span> en un <span id="auto"></span> usted recorrerá 
+            <span id="km"></span> demorándose <span id="tiempo"></span> teniendo un consumo de combustible de 
+            <span id="combustible"></span> litros</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+</body>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+<script src="main.js"></script>
+</html>

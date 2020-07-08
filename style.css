@@ -1,0 +1,22 @@
+body{
+    font-family: 'Ubuntu', sans-serif;
+    background-color: #202336;
+}
+#titulo{
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+.card-body{
+    background-color: #b2ddff;
+    
+}
+#autito{
+    width: 90%;
+    border-radius: 5px;
+}
+.btn-primary{
+    background-color: #202336;
+}
+.modal-body{
+    font-size: 14pt;
+}
