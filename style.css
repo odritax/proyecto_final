@@ -1,6 +1,8 @@
 body{
     font-family: 'Ubuntu', sans-serif;
     background-color: #202336;
+    /* background-image: url('img/114060-OOYHOE-336.jpg'); */
+    background-size: cover;
 }
 #titulo{
     font-weight: bold;

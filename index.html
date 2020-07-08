@@ -28,7 +28,6 @@
                             <option value="-29.90453,-71.24894" data-nombre="La Serena">La Serena</option>
                             <option value="-33.036,-71.62963" data-nombre="Valparaíso">Valparaíso</option>
                             <option value="jps" id="jps_origin" data-nombre="su ubicación actual">Ubicación Actual</option>
-
                         </select>
                         <br>
                         <select name="" id="destino" class="form-control">
@@ -59,18 +58,19 @@
     <div id="modal" class="modal" tabindex="-1" role="dialog">
         <div class="modal-dialog">
           <div class="modal-content">
-            <div class="modal-body">
+            <div class="modal-header">
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
-             <p>Desde <span id="origin"></span> hacia <span id="destiny"></span> en un <span id="auto"></span> usted recorrerá 
-            <span id="km"></span> demorándose <span id="tiempo"></span> teniendo un consumo de combustible de 
-            <span id="combustible"></span> litros</p>
+            </div>
+            <div class="modal-body">
+                <p>Desde <span id="origin"></span> hacia <span id="destiny"></span> en un <span id="auto"></span> usted recorrerá 
+                <span id="km"></span> demorándose <span id="tiempo"></span> teniendo un consumo de combustible de 
+                <span id="combustible"></span> litros</p>
             </div>
           </div>
         </div>
       </div>
-    
 </body>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
