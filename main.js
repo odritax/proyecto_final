@@ -1,6 +1,7 @@
     const origen= document.getElementById('origen');
     const destino=document.getElementById('destino');
     var consumo=0;
+
     class Vehiculo {
         constructor(){}
         avanzar() {
@@ -18,6 +19,7 @@
             return consumo;//km en carretera;
         }
     }
+
     class Toyota extends Vehiculo {
         constructor(){
                 super();
@@ -28,6 +30,7 @@
             return consumo;//km en carretera;
         }
     }
+
     class Suzuki extends Vehiculo {
         constructor(){
             super();
@@ -38,6 +41,7 @@
             return consumo;//km en carretera;
         }
     }
+
     class Nissan extends Vehiculo {
         constructor() {
             super();
@@ -49,6 +53,7 @@
             return consumo;//km en carretera;
         }
     }
+
     function texto_modal(origen,destino,distancia,duracion,auto,consumo){
             document.getElementById('origin').innerHTML=origen;
             document.getElementById('destiny').innerHTML=destino;
@@ -58,6 +63,7 @@
             document.getElementById('combustible').innerHTML=consumo;
             $('#modal').modal('show'); 
     }
+
     function getLocation() {
             if (navigator.geolocation) {
             navigator.geolocation.getCurrentPosition(showPosition);
@@ -77,6 +83,7 @@
             document.getElementById('jps_destinity').setAttribute('value',`${latitud_actual},${longitud_actual}`);    
         }
     }
+    
     var check_origin=false;
     origen.addEventListener('change',()=>{
         if(origen.value=="jps"){
@@ -92,7 +99,6 @@
     });
 
     document.getElementById('calcular').addEventListener('click',()=>{
-        
     fetch('https://maps.googleapis.com/maps/api/distancematrix/json?origins='+origen.value+'&destinations='+destino.value+'&key=AIzaSyAlDSRLGoUqLzoFZQlR7wvyRoNdsufoQls',{})
             .then(datos=>datos.json())
             .then(datos_json=> {
