@@ -1,3 +1,6 @@
+    $(document).ready(function() {
+        $('select').niceSelect();
+    });  
     const origen= document.getElementById('origen');
     const destino=document.getElementById('destino');
     var consumo=0;
@@ -73,32 +76,25 @@
     }
 
     function showPosition(position) {
-            console.log("Latitude: " + position.coords.latitude + 
-            "<br>Longitude: " + position.coords.longitude);
+            console.log("Latitude: " + position.coords.latitude+"Longitude: " + position.coords.longitude);
             const latitud_actual=position.coords.latitude;
             const longitud_actual=position.coords.longitude;
             if (check_origin==true){
-                document.getElementById('jps_origin').setAttribute('value',`${latitud_actual},${longitud_actual}`);    
+                origen.nextElementSibling.children[1].lastElementChild.setAttribute('data-value',`${latitud_actual},${longitud_actual}`);    
             }else{
-                document.getElementById('jps_destinity').setAttribute('value',`${latitud_actual},${longitud_actual}`);    
+                destino.nextElementSibling.children[1].lastElementChild.setAttribute('data-value',`${latitud_actual},${longitud_actual}`);    
             }
     }
     
     var check_origin=false;
-    origen.addEventListener('change',()=>{
+
+    document.getElementById('calcular').addEventListener('click',()=>{
         if(origen.value=="jps"){
             check_origin+=true;
             getLocation();
-        }
-    });
-
-    destino.addEventListener('change',()=>{
-        if(destino.value=="jps"){
+        }else if(destino.value=="jps"){
             getLocation();
         }
-    });
-
-    document.getElementById('calcular').addEventListener('click',()=>{
     fetch('https://maps.googleapis.com/maps/api/distancematrix/json?origins='+origen.value+'&destinations='+destino.value+'&key=AIzaSyAlDSRLGoUqLzoFZQlR7wvyRoNdsufoQls',{})
             .then(datos=>datos.json())
             .then(datos_json=> {

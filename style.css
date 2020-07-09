@@ -1,24 +1,61 @@
 body{
     font-family: 'Ubuntu', sans-serif;
-    background-color: #202336;
-    /* background-image: url('img/114060-OOYHOE-336.jpg'); */
-    background-size: cover;
 }
+body::after {
+    content: "";
+    background-image: url('img/fondito.svg');
+    background-size:cover;
+    opacity: 0.8;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;   
+  }
 #titulo{
     font-weight: bold;
     font-size: 1.5rem;
 }
-.card-body{
-    background-color: #b2ddff;
-    
-}
-#autito{
-    width: 90%;
-    border-radius: 5px;
+.card{
+    border-radius: 10px;
 }
 .btn-primary{
-    background-color: #202336;
+    font-size: 12pt;
+    font-weight: bold;
+    padding: 10px 25px;
+    border-radius: 25px;
 }
-.modal-body{
+#autito{
+    width: 80%;
+    border-radius: 5px;
+}
+.close{
+    position: relative;
+    top:-30px;
+    color: white;
+    /* margin-bottom: 30px; */
+}
+.close:hover{
+    color: white;
+    /* margin-bottom: 30px; */
+}
+.modal-content{
+    color: white;
+    border-radius:  20px;
+    background-color: #007bff;
     font-size: 14pt;
+    padding: 35px;
+    text-align: justify;
+    border:none;
+}
+/* #imagen_modal{
+    width: 80%;
+} */
+#auto,.combustible{
+    font-style: italic;
+    font-weight: bold;
+}
+#origin,#destiny{
+    color:red;
 }
